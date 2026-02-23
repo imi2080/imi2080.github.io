@@ -5,53 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김동호 교수 | 한라대학교 컴퓨터공학과</title>
     <style>
-        body { font-family: 'Pretendard', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: #f9f9f9; }
-        header { text-align: center; border-bottom: 2px solid #0056b3; padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { color: #0056b3; margin-bottom: 10px; }
-        .intro { font-size: 1.1em; color: #555; }
-        section { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        h2 { border-left: 5px solid #0056b3; padding-left: 10px; color: #0056b3; font-size: 1.4em; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin-bottom: 10px; padding-left: 20px; position: relative; }
-        li::before { content: "•"; color: #0056b3; font-weight: bold; position: absolute; left: 0; }
-        .tag { background: #e7f1ff; color: #0056b3; padding: 2px 8px; border-radius: 4px; font-size: 0.9em; font-weight: bold; }
-        footer { text-align: center; margin-top: 40px; font-size: 0.9em; color: #888; }
+        :root { --primary-color: #003366; --secondary-color: #0056b3; --bg-color: #f4f7f6; }
+        body { font-family: 'Pretendard', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 40px 20px; background-color: var(--bg-color); }
+        header { text-align: center; border-bottom: 3px solid var(--primary-color); padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: var(--primary-color); margin-bottom: 5px; font-size: 2.2em; }
+        .title-sub { font-size: 1.2em; color: #666; font-weight: 500; }
+        
+        section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; }
+        h2 { border-left: 6px solid var(--primary-color); padding-left: 15px; color: var(--primary-color); font-size: 1.5em; margin-top: 0; margin-bottom: 20px; }
+        
+        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .course-card { background: #f8f9fa; padding: 15px; border-radius: 8px; border-top: 4px solid var(--secondary-color); }
+        .course-name { font-weight: bold; color: var(--primary-color); display: block; margin-bottom: 5px; }
+        
+        .project-box { border: 1px solid #e1e4e8; padding: 20px; border-radius: 8px; background-color: #fcfcfc; }
+        .tech-tag { display: inline-block; background: #e7f1ff; color: var(--secondary-color); padding: 2px 10px; border-radius: 15px; font-size: 0.85em; font-weight: bold; margin-right: 5px; }
+        
+        footer { text-align: center; margin-top: 50px; font-size: 0.9em; color: #999; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>김동호 (Kim Dong-ho)</h1>
-    <p class="intro">한라대학교 컴퓨터공학과 교수</p>
+    <p class="title-sub">한라대학교 컴퓨터공학과 교수</p>
 </header>
 
 <section>
-    <h2>소개</h2>
-    <p>안녕하세요. 한라대학교 컴퓨터공학과에서 학생들과 함께 미래를 설계하고 있는 김동호입니다. 은퇴 후에도 끊임없이 변화하는 기술의 흐름을 탐구하며, 지식의 나눔을 실천하고 있습니다.</p>
+    <h2>Education & Philosophy</h2>
+    <p>기초가 탄탄한 공학자가 미래를 바꿉니다. C언어부터 최신 자율적 에이전트 기술까지, 한라대학교 학생들과 함께 실제 작동하는 지능형 시스템을 구축하며 실무 중심의 교육을 실천하고 있습니다.</p>
 </section>
 
 <section>
-    <h2>주요 관심 분야</h2>
-    <ul>
-        <li><span class="tag">AI & AGI</span> 인공일반지능의 발전과 사회적 영향력 연구</li>
-        <li><span class="tag">Autonomous Agents</span> Tavily 등을 활용한 자율적 에이전트 설계 및 구현</li>
-        <li><span class="tag">Programming</span> C++, Python을 활용한 효율적인 시스템 구축</li>
-        <li><span class="tag">Web Development</span> Flask와 OpenAI API를 결합한 지능형 웹 서비스</li>
-    </ul>
+    <h2>2026년 1학기 강의</h2>
+    <div class="course-grid">
+        <div class="course-card">
+            <span class="course-name">프로그래밍(1)</span>
+            <small>C언어 기초 및 알고리즘</small>
+        </div>
+        <div class="course-card">
+            <span class="course-name">정보통신개론</span>
+            <small>네트워크 및 인프라 기초</small>
+        </div>
+        <div class="course-card">
+            <span class="course-name">자바프로그래밍</span>
+            <small>객체지향 설계 및 실습</small>
+        </div>
+        <div class="course-card">
+            <span class="course-name">웹프로그래밍</span>
+            <small>Flask 기반 지능형 웹 개발</small>
+        </div>
+    </div>
 </section>
 
 <section>
-    <h2>현재 진행 중인 프로젝트</h2>
-    <ul>
-        <li><strong>찐친 챗봇 (JJINCHIN)</strong>: OpenAI 기반의 지능형 대화 엔진 및 토큰 관리 시스템 개발</li>
-        <li><strong>RISE 프로그램</strong>: 한라대학교 지역 혁신 교육 프로그램 기획 및 운영</li>
-        <li><strong>에이전트 연구</strong>: 실시간 검색 엔진과 LLM을 결합한 정보 요약 에이전트 실험</li>
-    </ul>
+    <h2>주요 프로젝트: 챗봇 서비스 만들기</h2>
+    <div class="project-box">
+        <h3>🚀 찐친 (JJINCHIN) 챗봇 엔진</h3>
+        <p>단순한 응답을 넘어 사용자의 의도를 분석하고 필요한 도구를 자율적으로 호출하는 지능형 서비스입니다.</p>
+        <div>
+            <span class="tech-tag">OpenAI API</span>
+            <span class="tech-tag">Tavily Search</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Function Calling</span>
+        </div>
+        <ul style="margin-top: 15px; font-size: 0.95em;">
+            <li><strong>지능형 분석</strong>: <code>analyze()</code>를 통한 도구 사용 여부 판단</li>
+            <li><strong>실시간 정보</strong>: Tavily API를 연동한 자율적 에이전트 기능</li>
+            <li><strong>메모리 최적화</strong>: 토큰 제한을 고려한 컨텍스트 관리 로직</li>
+        </ul>
+    </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Kim Dong-ho. All rights reserved.</p>
-    <p>Halla University | Department of Computer Science and Engineering</p>
+    <p>&copy; 2026 Kim Dong-ho | Halla University</p>
+    <p>Department of Computer Science and Engineering</p>
 </footer>
 
 </body>
